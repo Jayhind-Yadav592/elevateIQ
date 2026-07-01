@@ -1,4 +1,4 @@
-# TechNova Solutions — CompanyPortfolio
+# ELEVATEIQ SOFT TECH PRIVATE LIMITED — CompanyPortfolio
 
 Premium Enterprise IT company portfolio built with HTML5, CSS3, Vanilla JavaScript and Bootstrap 5.3.
 
