@@ -2,28 +2,7 @@
 ====================================================
  PREMIUM GLASSMORPHISM UPGRADE
  Generated for ElevateIQ Portfolio
-====================================================
-*/
-
-:root {
-    --bg-primary: #0a102e;
-    --bg-secondary: #0B1225;
-    --bg-third: #101B34;
-
-    --text: #FFFFFF;
-    --text-muted: #B8C5D6;
-
-    --accent: #38BDF8;
-    --accent-hover: #3B82F6;
-
-    --card-bg: rgba(255, 255, 255, .07);
-    --card-border: rgba(255, 255, 255, .12);
-
-    --button-grad: linear-gradient(135deg, #38BDF8, #3B82F6);
-    --glass-blur: 20px;
-    --glass-sat: 1;
-}
-
+====================================================*/
 
 /*
     ElevateIQ — style.css
@@ -211,7 +190,8 @@ img {
 }
 
 .brand-name {
-    font-weight: 700
+    font-weight: 700;
+
 }
 
 .brand-tag {
@@ -677,7 +657,7 @@ body {
 
 h1,
 h2,
-h3{
+h3 {
     background: linear-gradient(90deg, #fff, #38BDF8, #8B5CF6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -692,6 +672,42 @@ h3{
     border-radius: 30px;
 }
 
-.custom-btn{
+.custom-btn {
     color: #c02f2f !important;
 }
+
+/* Navbar Brand */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Main Company Name */
+.company-name {
+    font-family: "Cinzel", serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #f26722;
+    /* Orange */
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    text-shadow:
+        2px 2px 0 rgba(0, 0, 0, .12),
+        0 0 12px rgba(242, 103, 34, .25);
+}
+
+/* Subtitle */
+.company-tagline {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    font-size: .65rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #12a8e8;
+    /* Blue */
+    margin-top: 3px;
+    text-transform: uppercase;
+}       

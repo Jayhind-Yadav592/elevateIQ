@@ -25,3 +25,21 @@
 .navbar .nav-link{padding:.6rem .5rem}
 
 /* End responsive.css */
+
+@media(max-width:992px){
+
+.company-name{
+    font-size:1.3rem;
+    letter-spacing:2px;
+}
+
+.company-tagline{
+    font-size:.45rem;
+    letter-spacing:3px;
+}
+
+.navbar-brand img{
+    width:40px;
+}
+
+}
