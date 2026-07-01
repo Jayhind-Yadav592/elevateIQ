@@ -1,0 +1,378 @@
+/*==================================
+          CONTACT SECTION
+===================================*/
+
+#contact{
+    position:relative;
+    padding:100px 0;
+    background:linear-gradient(180deg,#071224,#0B172E);
+    overflow:hidden;
+}
+
+#contact::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    top:-180px;
+    left:-180px;
+    background:rgba(59,130,246,.12);
+    filter:blur(150px);
+    border-radius:50%;
+}
+
+#contact::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    bottom:-180px;
+    right:-180px;
+    background:rgba(56,189,248,.10);
+    filter:blur(130px);
+    border-radius:50%;
+}
+
+/* Heading */
+
+#contact h3{
+
+    color:#fff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+#contact h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin-top:15px;
+
+    border-radius:20px;
+
+    background:linear-gradient(90deg,#38BDF8,#3B82F6);
+
+}
+
+#contact p{
+
+    color:#B7C6D9;
+
+    line-height:1.8;
+
+}
+
+/* Contact Info */
+
+#contact ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:30px;
+
+}
+
+#contact ul li{
+
+    color:#D7E3F3;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+#contact ul li:last-child{
+
+    border:none;
+
+}
+
+#contact strong{
+
+    color:#38BDF8;
+
+}
+
+/*==============================
+        FORM
+===============================*/
+
+#contact form{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+/* Input */
+
+.form-control{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    color:#fff;
+
+    border-radius:15px;
+
+    padding:14px;
+
+    transition:.4s;
+
+}
+
+.form-control::placeholder{
+
+    color:#AFC0D6;
+
+}
+
+.form-control:focus{
+
+    background:rgba(255,255,255,.10);
+
+    border-color:#38BDF8;
+
+    color:#fff;
+
+    box-shadow:0 0 15px rgba(56,189,248,.25);
+
+}
+
+.form-label{
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+/* Button */
+
+#contact .btn{
+
+    padding:14px 30px;
+
+    border-radius:40px;
+
+    background:linear-gradient(135deg,#38BDF8,#3B82F6);
+
+    border:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+#contact .btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(56,189,248,.35);
+
+}
+
+/*==================================
+            FOOTER
+===================================*/
+
+footer{
+
+    background:linear-gradient(180deg,#050816,#071224);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:30px 0;
+
+}
+
+footer img{
+
+    border-radius:10px;
+
+    transition:.4s;
+
+}
+
+footer img:hover{
+
+    transform:rotate(-8deg) scale(1.1);
+
+}
+
+footer small{
+
+    color:#B7C6D9;
+
+    margin-left:10px;
+
+}
+
+footer ul{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+footer ul li{
+
+    margin-left:20px;
+
+}
+
+footer ul li a{
+
+    color:#B7C6D9;
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+footer ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:2px;
+
+    background:#38BDF8;
+
+    transition:.35s;
+
+}
+
+footer ul li a:hover{
+
+    color:#38BDF8;
+
+}
+
+footer ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/*==================================
+      BACK TO TOP
+===================================*/
+
+.back-to-top{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#38BDF8,#3B82F6);
+
+    border:none;
+
+    box-shadow:0 10px 25px rgba(56,189,248,.35);
+
+    transition:.4s;
+
+}
+
+.back-to-top:hover{
+
+    transform:translateY(-6px) rotate(360deg);
+
+    box-shadow:0 20px 40px rgba(56,189,248,.45);
+
+}
+
+/*==================================
+        RESPONSIVE
+===================================*/
+
+@media(max-width:991px){
+
+#contact{
+
+padding:80px 0;
+
+}
+
+#contact h3{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#contact{
+
+padding:70px 0;
+
+}
+
+#contact h3{
+
+font-size:30px;
+
+}
+
+footer{
+
+text-align:center;
+
+}
+
+footer .container{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+footer ul li{
+
+margin:8px;
+
+display:inline-block;
+
+}
+
+}

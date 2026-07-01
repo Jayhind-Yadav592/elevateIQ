@@ -1,0 +1,427 @@
+/*==================================
+            PRICING
+===================================*/
+
+#pricing{
+    position:relative;
+    padding:100px 0;
+    background:linear-gradient(180deg,#071224,#0B172E);
+    overflow:hidden;
+}
+
+#pricing::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    top:-200px;
+    left:-200px;
+    border-radius:50%;
+    background:rgba(59,130,246,.12);
+    filter:blur(150px);
+}
+
+#pricing::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    bottom:-200px;
+    right:-200px;
+    border-radius:50%;
+    background:rgba(56,189,248,.10);
+    filter:blur(130px);
+}
+
+#pricing h3{
+
+    text-align:center;
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:20px;
+
+}
+
+#pricing h3::after{
+
+    content:"";
+    display:block;
+    width:90px;
+    height:4px;
+    margin:18px auto;
+    border-radius:20px;
+    background:linear-gradient(90deg,#38BDF8,#3B82F6);
+
+}
+
+/* Card */
+
+.price-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    transition:.45s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.price-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#38BDF8,#3B82F6);
+
+    opacity:.15;
+
+    transition:.5s;
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#38BDF8;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.45),
+    0 0 25px rgba(56,189,248,.20);
+
+}
+
+.price-card:hover::before{
+
+    transform:scale(1.5);
+
+}
+
+.price-card h5{
+
+    color:#fff;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.price-card p{
+
+    color:#B7C6D9;
+
+}
+
+.price{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#38BDF8;
+
+}
+
+.price-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:20px 0;
+
+}
+
+.price-card ul li{
+
+    color:#D5E2F2;
+
+    padding:10px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.price-card ul li:last-child{
+
+    border-bottom:none;
+
+}
+
+/* Featured Card */
+
+.price-card.featured{
+
+    border:2px solid #38BDF8;
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 20px 60px rgba(56,189,248,.35);
+
+}
+
+.price-card .btn{
+
+    width:100%;
+
+    border-radius:50px;
+
+    padding:12px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.price-card .btn-primary{
+
+    background:linear-gradient(135deg,#38BDF8,#3B82F6);
+
+    border:none;
+
+}
+
+.price-card .btn-outline-primary{
+
+    border:1px solid #38BDF8;
+
+    color:#38BDF8;
+
+}
+
+.price-card .btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*==================================
+                FAQ
+===================================*/
+
+#faqs{
+
+    position:relative;
+
+    padding:100px 0;
+
+    background:linear-gradient(180deg,#050816,#0B172E);
+
+}
+
+#faqs h3{
+
+    text-align:center;
+
+    color:#fff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+}
+
+#faqs h3::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    margin:18px auto;
+
+    background:linear-gradient(90deg,#38BDF8,#3B82F6);
+
+    border-radius:20px;
+
+}
+
+/* Accordion */
+
+.accordion{
+
+    --bs-accordion-bg:transparent;
+
+    --bs-accordion-border-color:transparent;
+
+}
+
+.accordion-item{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px !important;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.accordion-button{
+
+    background:transparent !important;
+
+    color:#fff !important;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    padding:22px;
+
+    box-shadow:none !important;
+
+}
+
+.accordion-button:not(.collapsed){
+
+    background:rgba(56,189,248,.12)!important;
+
+    color:#38BDF8 !important;
+
+}
+
+.accordion-button::after{
+
+    filter:invert(1);
+
+}
+
+.accordion-body{
+
+    color:#C8D5E6;
+
+    background:rgba(255,255,255,.03);
+
+    line-height:1.8;
+
+}
+
+/* Remove Bootstrap white background */
+
+.accordion-button p{
+
+    color:#fff !important;
+
+    margin:0;
+
+}
+
+.accordion-button:not(.collapsed) p{
+
+    color:#38BDF8 !important;
+
+}
+
+/* Hover */
+
+.accordion-item:hover{
+
+    border-color:#38BDF8;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.45),
+    0 0 25px rgba(56,189,248,.25);
+
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+#pricing,
+#faqs{
+
+padding:80px 0;
+
+}
+
+#pricing h3,
+#faqs h3{
+
+font-size:34px;
+
+}
+
+.price{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#pricing,
+#faqs{
+
+padding:70px 0;
+
+}
+
+#pricing h3,
+#faqs h3{
+
+font-size:30px;
+
+}
+
+.price-card{
+
+padding:30px 20px !important;
+
+}
+
+.price{
+
+font-size:30px;
+
+}
+
+.accordion-button{
+
+font-size:16px;
+
+padding:18px;
+
+}
+
+}

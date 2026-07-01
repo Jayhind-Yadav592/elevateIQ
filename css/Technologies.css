@@ -1,0 +1,273 @@
+/*==================================
+        TECHNOLOGIES SECTION
+===================================*/
+
+#technologies{
+    position:relative;
+    padding:100px 0;
+    background:linear-gradient(180deg,#071224,#0B172E);
+    overflow:hidden;
+}
+
+/* Background Glow */
+
+#technologies::before{
+    content:'';
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(59,130,246,.12);
+    filter:blur(150px);
+    border-radius:50%;
+    top:-180px;
+    left:-180px;
+}
+
+#technologies::after{
+    content:'';
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:rgba(56,189,248,.10);
+    filter:blur(130px);
+    border-radius:50%;
+    bottom:-180px;
+    right:-180px;
+}
+
+/*=========================
+        HEADING
+==========================*/
+
+#technologies h3{
+
+    text-align:center;
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+
+}
+
+#technologies h3::after{
+
+    content:"";
+    display:block;
+    width:90px;
+    height:4px;
+    margin:18px auto 0;
+    border-radius:20px;
+
+    background:linear-gradient(90deg,#38BDF8,#3B82F6);
+
+}
+
+#technologies p{
+
+    text-align:center;
+    color:#B7C6D9;
+    font-size:17px;
+    max-width:700px;
+    margin:0 auto;
+
+}
+
+/*=========================
+      TECHNOLOGY CARD
+==========================*/
+
+.tech-item{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.tech-item img{
+
+    width:95px;
+    height:95px;
+    object-fit:contain;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    transition:.45s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+/* Hover */
+
+.tech-item:hover img{
+
+    transform:
+    translateY(-12px)
+    scale(1.08)
+    rotate(-5deg);
+
+    background:rgba(255,255,255,.12);
+
+    border-color:#38BDF8;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.40),
+    0 0 25px rgba(56,189,248,.25);
+
+}
+
+/*=========================
+     FLOAT ANIMATION
+==========================*/
+
+.tech-item img{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+.tech-item:nth-child(2) img{
+animation-delay:.3s;
+}
+
+.tech-item:nth-child(3) img{
+animation-delay:.6s;
+}
+
+.tech-item:nth-child(4) img{
+animation-delay:.9s;
+}
+
+.tech-item:nth-child(5) img{
+animation-delay:1.2s;
+}
+
+.tech-item:nth-child(6) img{
+animation-delay:1.5s;
+}
+
+.tech-item:nth-child(7) img{
+animation-delay:1.8s;
+}
+
+.tech-item:nth-child(8) img{
+animation-delay:2.1s;
+}
+
+@keyframes floating{
+
+0%,100%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+/*=========================
+      GLOW BORDER
+==========================*/
+
+.tech-item{
+
+    position:relative;
+
+}
+
+.tech-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    padding:1px;
+
+    background:linear-gradient(
+    135deg,
+    rgba(56,189,248,.5),
+    transparent,
+    rgba(59,130,246,.5));
+
+    -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:991px){
+
+#technologies{
+
+padding:80px 0;
+
+}
+
+#technologies h3{
+
+font-size:34px;
+
+}
+
+.tech-item img{
+
+width:85px;
+height:85px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+#technologies{
+
+padding:70px 0;
+
+}
+
+#technologies h3{
+
+font-size:30px;
+
+}
+
+#technologies p{
+
+font-size:15px;
+
+}
+
+.tech-item img{
+
+width:75px;
+height:75px;
+padding:16px;
+
+}
+
+}
