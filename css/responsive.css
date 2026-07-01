@@ -1,0 +1,27 @@
+/* responsive.css — focused overrides for smaller screens and touch UX */
+
+@media (max-width: 1200px){
+  .hero-section .display-5{font-size:2.2rem}
+}
+
+@media (max-width: 992px){
+  .hero-section .display-5{font-size:1.9rem}
+  .hero-visual{margin-top:24px}
+}
+
+@media (max-width: 768px){
+  .navbar-collapse{background:linear-gradient(180deg,rgba(2,6,23,0.96),rgba(2,6,23,0.98));padding:18px;border-radius:12px}
+  .service-card{padding:18px}
+}
+
+@media (max-width: 576px){
+  .hero-section .display-5{font-size:1.5rem}
+  .hero-cta .btn{padding:.6rem 1rem}
+  .loader-bar{width:160px}
+  .scroll-indicator{display:none}
+}
+
+/* Improve tap targets */
+.navbar .nav-link{padding:.6rem .5rem}
+
+/* End responsive.css */

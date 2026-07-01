@@ -1,0 +1,697 @@
+/*
+====================================================
+ PREMIUM GLASSMORPHISM UPGRADE
+ Generated for ElevateIQ Portfolio
+====================================================
+*/
+
+:root {
+    --bg-primary: #0a102e;
+    --bg-secondary: #0B1225;
+    --bg-third: #101B34;
+
+    --text: #FFFFFF;
+    --text-muted: #B8C5D6;
+
+    --accent: #38BDF8;
+    --accent-hover: #3B82F6;
+
+    --card-bg: rgba(255, 255, 255, .07);
+    --card-border: rgba(255, 255, 255, .12);
+
+    --button-grad: linear-gradient(135deg, #38BDF8, #3B82F6);
+    --glass-blur: 20px;
+    --glass-sat: 1;
+}
+
+
+/*
+    ElevateIQ — style.css
+    Redesigned: Dark Glassmorphism theme, optimized and organized.
+    Follow-up comments explain blocks. Keep styles modular and simple.
+*/
+
+:root {
+    /* Primary colour system (glassmorphism palette) */
+    --bg-primary: #060816;
+    /* page primary background */
+    --bg-secondary: #2d3944;
+    /* secondary sections */
+    --card-bg: rgba(255, 255, 255, 0.04);
+    /* glass card */
+    --card-border: rgba(255, 255, 255, 0.08);
+    --text: #ffffff;
+    --text-muted: #b8c0c8;
+    --accent: #7dc4ff;
+    /* accent */
+    --accent-hover: #4fb5ff;
+    --button-grad: linear-gradient(135deg, #6fc8ff, #4fb5ff);
+    --glass-blur: 10px;
+    --glass-sat: 0.12;
+    --max-width: 1280px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(125, 196, 255, 0.04), transparent 8%),
+        radial-gradient(900px 400px at 90% 80%, rgba(79, 181, 255, 0.03), transparent 10%),
+        linear-gradient(180deg, var(--bg-primary), #0f1720 100%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--primary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+.bg-animations {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg-animations .glow {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(80px);
+    background: radial-gradient(circle at 30% 30%, rgba(125, 196, 255, 0.14), transparent 30%),
+        radial-gradient(circle at 70% 70%, rgba(79, 181, 255, 0.06), transparent 30%);
+    mix-blend-mode: screen;
+    opacity: 0.9;
+}
+
+.bg-animations .glow.g1 {
+    left: -10%;
+    top: 5%;
+}
+
+.bg-animations .glow.g2 {
+    right: -10%;
+    bottom: 0;
+    width: 520px;
+    height: 520px;
+}
+
+/* subtle floating circles */
+.bg-animations .bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    z-index: 1050;
+    transition: opacity .9s ease, visibility .5s ease;
+}
+
+.loader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px
+}
+
+.loader-logo {
+    width: 72px;
+    height: 72px
+}
+
+.loader-bar {
+    width: 220px;
+    height: 8px;
+    background: rgba(16, 24, 40, 0.06);
+    border-radius: 999px;
+    overflow: hidden
+}
+
+.loader-bar span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    animation: loader 2.4s linear infinite
+}
+
+.loader-text {
+    color: var(--muted);
+    font-size: .95rem
+}
+
+@keyframes loader {
+    0% {
+        width: 6%
+    }
+
+    50% {
+        width: 62%
+    }
+
+    100% {
+        width: 6%
+    }
+}
+
+/* Scroll progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    z-index: 1200;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    box-shadow: 0 6px 20px rgba(79, 181, 255, 0.06);
+}
+
+/* Site nav */
+.site-nav {
+    background: transparent;
+    position: relative;
+    z-index: 1100;
+    backdrop-filter: blur(var(--glass-blur));
+}
+
+.navbar-brand .logo {
+    border-radius: 8px;
+    padding: 6px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.brand-name {
+    font-weight: 700
+}
+
+.brand-tag {
+    font-size: .78rem;
+    color: var(--muted)
+}
+
+.navbar .nav-link {
+    color: var(--text-muted);
+    transition: color .22s ease, transform .22s ease;
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    bottom: -8px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .28s ease;
+    border-radius: 2px;
+}
+
+.navbar .nav-link:hover {
+    color: var(--text);
+}
+
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar .nav-link.active {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Hero */
+.hero-section {
+    padding: 9px 5px;
+    position: relative;
+    z-index: 100;
+}
+
+.hero-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: 0 8px 32px rgba(2, 6, 23, 0.28);
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.hero-card {
+    position: relative;
+    border-radius: 18px;
+    padding: 18px;
+    overflow: hidden;
+}
+
+.hero-card img {
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(2, 6, 23, 0.6);
+    transform: translateY(0);
+    transition: transform .6s cubic-bezier(.2, .9, .2, 1), box-shadow .3s ease;
+}
+
+.hero-card:hover img {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 32px 90px rgba(2, 6, 23, 0.6);
+}
+
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-blob {
+    position: absolute;
+    right: -5%;
+    top: -8%;
+    width: 120%;
+    height: 120%;
+    pointer-events: none;
+    filter: blur(12px);
+    opacity: 0.85;
+}
+
+.floating-icons {
+    position: absolute;
+    right: 18%;
+    top: 18%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 3;
+}
+
+.floating-icons .icon {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+    color: var(--text);
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 64px;
+    border-radius: 22px;
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    display: grid;
+    place-items: start;
+    padding: 6px;
+}
+
+.scroll-indicator span {
+    width: 6px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 6px;
+    animation: scroll 1.6s infinite;
+}
+
+.box {
+    border: 3px solid blue;
+}
+
+.box:hover {
+    border: 3px solid red;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        opacity: 1
+    }
+
+    100% {
+        transform: translateY(18px);
+        opacity: 0
+    }
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+    position: relative;
+    z-index: 1
+}
+
+.bg-dark-variant {
+    background: linear-gradient(180deg, var(--bg-secondary), #071025);
+}
+
+.text-light {
+    color: var(--text);
+}
+
+.section-head h3 {
+    margin: 0;
+    color: var(--text);
+}
+
+/* Service cards */
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 60px rgba(2, 6, 23, 0.35);
+}
+
+.icon-large {
+    font-size: 28px
+}
+
+/* Technologies */
+.tech-item img {
+    width: 64px;
+    filter: grayscale(.12) contrast(.9);
+    transition: transform .28s ease, filter .28s ease;
+}
+
+.tech-item img:hover {
+    transform: rotate(-6deg) scale(1.06);
+    filter: grayscale(0);
+}
+
+/* Why */
+.why-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    text-align: center;
+    font-weight: 600;
+    transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(2, 6, 23, 0.32);
+}
+
+
+/* stats */
+.counter {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text);
+}
+
+/* Project cards */
+.proj-card img {
+    height: 220px;
+    object-fit: cover;
+    transition: transform .5s ease, filter .4s ease;
+}
+
+.proj-card img:hover {
+    transform: scale(1.04) rotate(-0.6deg);
+    filter: brightness(1.02);
+}
+
+.proj-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+/* Team */
+.team-card img {
+    object-fit: cover;
+    transition: transform .36s cubic-bezier(.2, .9, .2, 1);
+}
+
+.team-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Price */
+.price-card.featured {
+    border: 2px solid rgba(125, 196, 255, 0.12);
+    box-shadow: 0 30px 80px rgba(2, 6, 23, 0.28);
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(180deg, #071025, #03121a);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    border-radius: 999px;
+    display: none;
+    z-index: 1200;
+    background: var(--button-grad);
+    border: none;
+    color: #06202b;
+    box-shadow: 0 12px 30px rgba(79, 181, 255, 0.12);
+}
+
+/* WhatsApp FAB */
+.whatsapp-fab {
+    position: fixed;
+    right: 18px;
+    bottom: 100px;
+    background: #25d366;
+    color: white;
+    padding: 12px;
+    border-radius: 999px;
+    z-index: 999;
+    text-decoration: none
+}
+
+/* Forms */
+form.bg-light {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Utilities */
+.rounded {
+    border-radius: 12px
+}
+
+.shadow-sm {
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08)
+}
+
+/* Responsive tweaks (base) */
+
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 64px 0
+    }
+
+    .floating-icons {
+        display: none
+    }
+}
+
+@media (max-width:576px) {
+    .brand-text {
+        display: none
+    }
+
+    .hero-section {
+        padding: 48px 0
+    }
+
+    .hero-card img {
+        max-width: 100%;
+    }
+}
+
+/* Accessibility focus */
+a:focus,
+button:focus {
+    outline: 3px solid rgba(37, 99, 235, 0.18);
+    outline-offset: 3px
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(24, 230, 86, 0.63);
+    cursor: pointer;
+    /* color:rgb(95, 114, 216) */
+}
+
+/* End of style.css */
+
+
+
+/* ====================================================
+   PREMIUM OVERRIDES
+==================================================== */
+
+body {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(59, 130, 246, .18), transparent 30%),
+        radial-gradient(circle at 90% 10%, rgba(139, 92, 246, .14), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(56, 189, 248, .12), transparent 30%),
+        linear-gradient(135deg, #050816, #091322, #101C35);
+    background-size: 400% 400%;
+    animation: bgMove 16s ease infinite;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: rgba(255, 255, 255, .05) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+.glass-card,
+.service-card,
+.why-card,
+.proj-card,
+.team-card,
+.price-card {
+    background: rgba(255, 255, 255, .07) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .12) !important;
+    border-radius: 22px;
+    transition: .4s;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .35);
+}
+
+.glass-card:hover,
+.service-card:hover,
+.why-card:hover,
+.proj-card:hover,
+.team-card:hover,
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, .45), 0 0 25px rgba(56, 189, 248, .2);
+}
+
+#btn,
+#btn-primary {
+    background: linear-gradient(135deg, #38BDF8, #3B82F6) !important;
+    border: none;
+    border-radius: 40px;
+    transition: .35s;
+}
+
+#btn:hover,
+#btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, .35);
+}
+
+.hero-card img {
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+h1,
+h2,
+h3{
+    background: linear-gradient(90deg, #fff, #38BDF8, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#38BDF8, #3B82F6);
+    border-radius: 30px;
+}
+
+.custom-btn{
+    color: #c02f2f !important;
+}
